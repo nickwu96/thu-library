@@ -32,7 +32,7 @@ def search(isbn):
         for i in soup.find_all('div', class_='list-item-wrapper'):
             j = i.find_all('span')
             if j[4].text == '图书' or j[2].text == '图书':  # 首先判断这一条信息是否为“图书”
-                if j[19].text[-5:] == '不可获取 ':  # 若提示不可获取意味着这本书还在订购，返回订购中的状态
+                if j[-4].text[-4:] == '不可获取':  # 若提示不可获取意味着这本书还在订购，返回订购中的状态
                     return '订购中\n'
                 else:  # 如果不是“订购中”，则直接返回索书号
                     number = soup.find('span', class_='best-location-delivery locations-link').text  # 获取索书号
