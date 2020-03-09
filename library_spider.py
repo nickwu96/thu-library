@@ -7,15 +7,16 @@ import time
 def get(url, ebook=False):  # 通过selenium（webdriver）获取网页全部内容, ebook参数用来区分是否为电子资源
     chrome_options = Options()
     chrome_options.add_argument('--headless')  # 设置Chrome为无头模式
-    chrome_options.add_argument('no-sandbox')  # 代码不明，主要为了适配centos服务器运行
-    chrome_options.add_argument('disable-dev-shm-usage')
+    chrome_options.add_argument('--no-sandbox')  # 代码不明，主要为了适配centos服务器运行
+    chrome_options.add_argument('--disable-dev-shm-usage')
     driver = webdriver.Chrome(options=chrome_options)
     driver.get(url)
     time.sleep(5)  # 等待5s使得全部信息加载完成
     if ebook:
-        driver.switch_to.frame("iFrameResizer0")   # 若为电子资源需要切换到iframe后再导出源代码
-    return BeautifulSoup(driver.page_source, 'html.parser')  # 使用beautifulsoup解析全部网页内容
+        driver.switch_to.frame("iFrameResizer0")  # 若为电子资源需要切换到iframe后再导出源代码
+    soup = BeautifulSoup(driver.page_source, 'html.parser')  # 使用beautifulsoup解析全部网页内容
     driver.close()  # 关闭driver
+    return soup
 
 
 # search 函数，用于搜索指定ISBN是否存在馆藏
@@ -43,11 +44,13 @@ def search(isbn):
                 if j[-1].text[-4:] == '在线访问':
                     ebook_url = i.find('a')['href']  # 若为电子资源，需要跳转到新的界面查询其数据库
                     soup = get(ebook_url, ebook=True)
-                    return '电子资源：{}'.format(soup.find('a', attrs={'target': '_blank'}).text)
-
+                    return '电子资源：{}\n'.format(soup.find('a', attrs={'target': '_blank'}).text)
+                if j[-1].text[-4:] == '在线全文':
+                    return '在线全文，目前未支持！\n'
                 else:  # 如果不是订购中，也不是电子资源，则直接返回索书号
                     number = soup.find('span', class_='best-location-delivery locations-link').text  # 获取索书号
                     return '{}\n'.format(number)
+        return 'N\n'  # 若检索到的信息都不是图书则返回N
 
 
 if __name__ == '__main__':
@@ -57,7 +60,12 @@ if __name__ == '__main__':
     ans = []  # 最终生成的结果
     num = 1  # 计数器
     for i in contents:
-        result = search(i)  # 调用查询函数，result记录了当前图书查询返回的结果
+        for iter_num in range(5):  # 迭代5次，避免因网络不好未加载出搜索结果
+            result = search(i)  # 调用查询函数，result记录了当前图书查询返回的结果
+            if result is not None:  # 找到搜索结果后跳出循环
+                break
+        if result is None:
+            result = '抱歉，暂未查询到信息！\n'
         print('[{}/{}]ISBN:{},{}'.format(num, len(contents), i.rstrip(), result), end='')  # 输出当前状态，第num条图书，其状态为..
         ans.append(result)
         num += 1
