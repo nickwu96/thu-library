@@ -23,7 +23,7 @@ def get(url, ebook=False):  # 通过selenium（webdriver）获取网页全部内
     is_multi = soup.find('span', attrs={'translate': 'nui.frbrversion.found'})  # 增加一个标签判断是否有多个副本信息
     if is_multi:  # 判断是否为多条副本信息，若是则需要点击后查看全部的信息
         driver.find_element_by_class_name('prm-notice').click()
-        time.sleep(3)
+        time.sleep(5)  # 等待5s使得全部信息加载完成
         soup = BeautifulSoup(driver.page_source, 'html.parser')  # 使用beautifulsoup解析全部网页内容
 
     driver.close()  # 关闭driver
@@ -54,11 +54,11 @@ def search(isbn, times=1):  # times 表示第n次查询，若查询结果为N，
         if j[4].text == '图书' or j[2].text == '图书':
             # 第一种情况，提示“不可获取”
             if j[-4].text[-4:] == '不可获取':  # 若提示不可获取有两种情况：若有索书号则该图书正在借阅中，应返回索书号；否则为这本书正在订购中
-                number = i.find('span', class_='best-location-delivery locations-link').text  # 获取索书号
-                if not number:  # 若找不到索书号，则是订购中的状态
+                number = i.find('span', class_='best-location-delivery locations-link')  # 获取索书号
+                if not number.text:  # 若找不到索书号，则是订购中的状态
                     book_ans += '订购中;'
                 else:
-                    book_ans += number + ';'
+                    book_ans += number.text.rstrip(')').lstrip('(') + ';'  # 获取索书号
 
             # 第二种情况：在线资源
             elif j[-1].text[-4:] == '在线访问' or j[-1].text[-4:] == '在线全文':
@@ -67,6 +67,9 @@ def search(isbn, times=1):  # times 表示第n次查询，若查询结果为N，
                 for i2 in soup.find_all('a', attrs={'target': '_blank'}):
                     if i2.text:  # 若内容不为空
                         database_name = i2.text[:i2.text.find(' ')]  # 近提取电子资源数据库的第一个关键词
+                        name_dict = {'易阅通电子图': '易阅通', '爱学术电子': '爱学术'}  # 建立一个需要得电子数据库名的字典
+                        if database_name in name_dict:
+                            database_name = name_dict[database_name]
                         if database_name and database_name not in ebook_list:  # 若数据库名不为空且不在电子数据库列表中
                             ebook_list.append(database_name)
 
@@ -75,19 +78,17 @@ def search(isbn, times=1):  # times 表示第n次查询，若查询结果为N，
                 if number:
                     book_ans += number.text.rstrip(')').lstrip('(') + ';'  # 获取索书号
 
-
     # 判断是否存在电子资源
     if ebook_list:
-        book_ans += '电子图书-'
         for i in ebook_list:
-            book_ans += i + ';'
+            book_ans += '电子图书-' + i + ';'
         book_ans.rstrip(';')
 
-        # 返回查询到的结果
+    # 返回查询到的结果
     if book_ans:
         return '{}\n'.format(book_ans[:-1])
     else:
-        return search(isbn, times+1)
+        return search(isbn, times + 1)
 
 
 if __name__ == '__main__':
@@ -112,7 +113,8 @@ if __name__ == '__main__':
     time_start = time.time()
     for i in range(len(contents)):
         result = search(contents[i].rstrip('\n'))  # 调用查询函数，result记录了当前图书查询返回的结果
-        print('[{}/{}]查询:{} --- 结果:{}'.format(i+1, len(contents), contents[i].rstrip(), result), end='')  # 输出当前状态，第num条图书，其状态为..
+        print('[{}/{}]查询:{} --- 结果:{}'.format(i + 1, len(contents), contents[i].rstrip(), result),
+              end='')  # 输出当前状态，第num条图书，其状态为..
         with open('结果.txt', 'a') as f:
             f.write(result)
-    print('恭喜您，查询完成！共花费{}s'.format(time.time()-time_start))
+    print('恭喜您，查询完成！共花费{}s'.format(time.time() - time_start))

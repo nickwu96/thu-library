@@ -1,40 +1,40 @@
 N
-X24 FG56;╣Гвсм╪йИ-╟╝я╖йУ╣Гвс
-╣Гвсм╪йИ-SpringerLink
-╣Гвсм╪йИ-SpringerLink
+X24 FG56;Г■╣Е╜░Е⌡╬Д╧╕-Г┬╠Е╜╕Ф°╞
+Г■╣Е╜░Е⌡╬Д╧╕-SpringerLink
+Г■╣Е╜░Е⌡╬Д╧╕-SpringerLink
 F830.8 FZ63
 F0 FT89s 2016;F0 FT89s
-╣Гвсм╪йИ-SpringerLink
-F0-05 FM25;╣Гвсм╪йИ-Taylor
+Г■╣Е╜░Е⌡╬Д╧╕-SpringerLink
+F0-05 FM25;Г■╣Е╜░Е⌡╬Д╧╕-Taylor
 G305-09 FC29
 F091.348 FD25
 F113.2 FI581
 D231 FS54
 D0 FE42
 F069.9 FS76
-╣Гвсм╪йИ-ProQuest
+Г■╣Е╜░Е⌡╬Д╧╕-ProQuest
 F0 FM39
-╣Гвсм╪йИ-SpringerLink
+Г■╣Е╜░Е⌡╬Д╧╕-SpringerLink
 N
 N
 F0-05 FB79
-╣Гвсм╪йИ-SpringerLink
+Г■╣Е╜░Е⌡╬Д╧╕-SpringerLink
 F171.247 FM98
 F119.9 FE93
-F276.5 FE56;╣Гвсм╪йИ-ProQuest;рвтдм╗╣Гвсм╪
+F276.5 FE56;Г■╣Е╜░Е⌡╬Д╧╕-ProQuest;Г■╣Е╜░Е⌡╬Д╧╕-Ф≤⌠И≤┘И─ 
 N
 F135.19 FH67
 N
 F0 FE197
 F171.29 FG13
-╣Гвсм╪йИ-ProQuest;Taylor
+Г■╣Е╜░Е⌡╬Д╧╕-ProQuest;Г■╣Е╜░Е⌡╬Д╧╕-Taylor
 F156.194 FM43
 F32 FS25
 F120 FD39
 F120 FP44
 N
-F279.23 FY941;╣Гвсм╪йИ-Taylor
-╣Гвсм╪йИ-SpringerLink
+F279.23 FY941;Г■╣Е╜░Е⌡╬Д╧╕-Taylor
+Г■╣Е╜░Е⌡╬Д╧╕-SpringerLink
 F224.0 FQ11
 F01 FN81
 F272.2 FI581
@@ -42,20 +42,20 @@ F03 FC242
 D771.236 FT84
 F810 FE191
 D523.4 FC74
-F045.3 FS54;╣Гвсм╪йИ-рвтдм╗╣Гвсм╪
-╣Гвсм╪йИ-SpringerLink
+F045.3 FS54;Г■╣Е╜░Е⌡╬Д╧╕-Ф≤⌠И≤┘И─ 
+Г■╣Е╜░Е⌡╬Д╧╕-SpringerLink
 F276.5 FE93
 F301 FW28
-(TP18 FK76)
+TP18 FK76
 F231.5-09 FL47
 C912.3-095 FS67
 F335.111 FL25
-╣Гвсм╪йИ-SpringerLink
+Г■╣Е╜░Е⌡╬Д╧╕-SpringerLink
 F471.264 FS64
-F831.9 FF65;╣Гвсм╪йИ-ProQuest
+F831.9 FF65;Г■╣Е╜░Е⌡╬Д╧╕-ProQuest
 F406.2 FI421
-╣Гвсм╪йИ-SpringerLink
-F830.5 FH141;╣Гвсм╪йИ-╟╝я╖йУ╣Гвс
+Г■╣Е╜░Е⌡╬Д╧╕-SpringerLink
+F830.5 FH141;Г■╣Е╜░Е⌡╬Д╧╕-Г┬╠Е╜╕Ф°╞
 F272-05 FS67
 F830.99 FK25
 F830.59-09 FR28
@@ -64,17 +64,17 @@ F830.3 FN73
 D917 FL671
 F831.9 FN33
 F830.99 T698
-(G206.7 L713)
+G206.7 L713
 N
 N
 C91 FS6731
-╣Гвсм╪йИ-╟╝я╖йУ╣Гвс
+Г■╣Е╜░Е⌡╬Д╧╕-Г┬╠Е╜╕Ф°╞
 N
 C913.68 FD26
 C95 FE32
 C3 FW72
 N
-(G131.3 FS72)
+G131.3 FS72
 G31 FN67
 N
 C0 FR23
@@ -82,19 +82,19 @@ C912.6 FT731
 N
 C91-09 FH16
 C91 FR78
-╤╘╧╨жп;N09 FE21
+Х╝╒Х╢╜Д╦╜;N09 FE21
 C3 FA92
 C3 FB62
 C913.8 FD41
 K895.612.5 FR47
 C91-03 FA18
-(C3 FS161)
+C3 FS161
 C3 FW191
 N
 C91 FF79
 H026.3 FR38
 N
-╤╘╧╨жп
+Х╝╒Х╢╜Д╦╜
 G649.546.9 FI88
 N09 FL51
 O412.1 FI61 2016
@@ -103,12 +103,12 @@ N
 N
 N
 N
-╣Гвсм╪йИ-╟╝я╖йУ╣Гвс
+Г■╣Е╜░Е⌡╬Д╧╕-Г┬╠Е╜╕Ф°╞
 N
 Q1 FS84
 N
-╣Гвсм╪йИ-╟╝я╖йУ╣Гвс
-S15 FB24;╣Гвсм╪йИ-ProQuest
+Г■╣Е╜░Е⌡╬Д╧╕-Г┬╠Е╜╕Ф°╞
+S15 FB24;Г■╣Е╜░Е⌡╬Д╧╕-ProQuest
 C912.4 FE53 2015;C912.4 FE53
 Q81 FS84
 G321.92 FR67
@@ -123,15 +123,15 @@ N
 C09 FE45
 N
 C912.81 FY51
-N0-09 FB87;╣Гвсм╪йИ-Taylor
+N0-09 FB87;Г■╣Е╜░Е⌡╬Д╧╕-Taylor
 B82-052 FC77
-╤╘╧╨жп;N09 FE21
+Х╝╒Х╢╜Д╦╜;N09 FE21
 C91 FA641c 2016;C91 FA641c
 N03 FS58
 N
-(N02 FH67)
+N02 FH67
 B841 FG27
-╤╘╧╨жп;╣Гвсм╪йИ-ProQuest
+Х╝╒Х╢╜Д╦╜;Г■╣Е╜░Е⌡╬Д╧╕-ProQuest
 C916.2 FE57
 C3 FL87
 N
@@ -141,8 +141,8 @@ N02 FM951
 R322 FH18
 F270 FK45
 C3-62 FT36
-╤╘╧╨жп
-C0 FT39;╣Гвсм╪йИ-Brill
+Х╝╒Х╢╜Д╦╜
+C0 FT39;Г■╣Е╜░Е⌡╬Д╧╕-Brill
 N
 N
 N
@@ -159,8 +159,8 @@ G114 FL91
 G156.19 FM23
 TS971.23 FT89
 G0 FB25 2016;G0 FB25 2012;G0 FB25
-J60-05 FR74;╣Гвсм╪йИ-ProQuest
-╣Гвсм╪йИ-ProQuest
+J60-05 FR74;Г■╣Е╜░Е⌡╬Д╧╕-ProQuest
+Г■╣Е╜░Е⌡╬Д╧╕-ProQuest
 N
 G202-05 FW65
 G20 FA83
@@ -172,7 +172,7 @@ D035.29-37 FC35
 B96-05 FP76
 G206.3-05 FR81
 G269.275.8 FM26
-(G219.4 FA25)
+G219.4 FA25
 G258.5 FB56
 G253 FP95
 G434 FG56
@@ -185,8 +185,8 @@ N
 G206.3-09 FK88
 G206.2 FD57
 F110 FM82
-╣Гвсм╪йИ-SpringerLink
-╣Гвсм╪йИ-SpringerLink
+Г■╣Е╜░Е⌡╬Д╧╕-SpringerLink
+Г■╣Е╜░Е⌡╬Д╧╕-SpringerLink
 N
 B96-05 FP76
 G206.7 FB68
@@ -194,7 +194,7 @@ N
 N
 D950.28 FB86
 D082-05 FM48
-╣Гвсм╪йИ-Elsevier
+Г■╣Е╜░Е⌡╬Д╧╕-Elsevier
 N
 G206-43 FC43
 G206.3 FW39
@@ -202,14 +202,14 @@ G206.3-05 FC88
 J905.712 FB86
 G214 FC93
 G212 FY78
-╣Гвсм╪йИ-EBSCOhost
+Г■╣Е╜░Е⌡╬Д╧╕-EBSCOhost
 G206.3 FD74
 N
-G0 FC961;╣Гвсм╪йИ-Taylor
+G0 FC961;Г■╣Е╜░Е⌡╬Д╧╕-Taylor
 N
 N
 N
-G222.3 FM13;╣Гвсм╪йИ-ProQuest
+G222.3 FM13
 N
 G302 FI61
 G210 FH53
@@ -228,11 +228,11 @@ J941.1 FH73
 D5-05 FR86
 G219.19 FR43
 G206.7 FR86
-G171.2 FF54;╣Гвсм╪йИ-JSTOR
+G171.2 FF54
 G115 FH23
 C39 FD65
 G229.19 FM49
-TP393-05 FC97 2016;╣Гвсм╪йИ-ProQuest
+TP393-05 FC97 2016;Г■╣Е╜░Е⌡╬Д╧╕-ProQuest
 G219.712 FC88
 G206.3 FS73 2016;G206.3 FS73 2004;G206.3 FS73
 TP393.092.2 FO18
@@ -247,20 +247,20 @@ N
 N
 F272 FP99
 G206.3-05 FC45
-╤╘╧╨жп
+Х╝╒Х╢╜Д╦╜
 D440 FW82
-╤╘╧╨жп
-╤╘╧╨жп
+Х╝╒Х╢╜Д╦╜
+Х╝╒Х╢╜Д╦╜
 G21 FM18
-G206.3 FM99;╣Гвсм╪йИ-ProQuest
+G206.3 FM99
 G0-4 FC96
 G150.2 FC96
 N
 N
 N
 N
-(G206.3-05 FR74)
-C912.31 FS64
+G206.3-05 FR74
+C912.31 FS64;Г■╣Е╜░Е⌡╬Д╧╕-EBSCOhost
 G209 FG56
 N
 C912.31 FM36
